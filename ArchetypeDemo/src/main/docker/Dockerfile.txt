@@ -1,0 +1,7 @@
+FROM dockerfile/java:oracle-java8
+
+VOLUME /tmp
+ADD ArchetypeDemo.jar /opt/ArchetypeDemo/
+EXPOSE 8080
+WORKDIR /opt/ArchetypeDemo/
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-Xms512m", "-Xmx1g", "-jar", "ArchetypeDemo.jar"]
