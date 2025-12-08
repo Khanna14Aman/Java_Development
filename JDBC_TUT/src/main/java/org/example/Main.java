@@ -5,7 +5,7 @@ public class Main {
         Class.forName("org.postgresql.Driver");
         String url = "jdbc:postgresql://localhost:1024/postgres";
         String userName = "postgres";
-        String password = "khannass8";
+        String password = "aman";
         Connection con = DriverManager.getConnection(url, userName, password);
         System.out.println(con);
         Statement st = con.createStatement();

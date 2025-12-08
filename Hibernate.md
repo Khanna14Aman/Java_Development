@@ -1,0 +1,1 @@
+Hibernate is a Java-based ORM (Object–Relational Mapping) framework that helps developers interact with databases without writing a lot of SQL code.

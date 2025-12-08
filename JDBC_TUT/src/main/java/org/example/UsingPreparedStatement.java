@@ -4,7 +4,7 @@ public class UsingPreparedStatement {
     public static void main(String []args) throws Exception{
         String url = "jdbc:postgresql://localhost:1024/postgres";
         String userName = "postgres";
-        String password = "khannass8";
+        String password = "aman";
         Connection con = DriverManager.getConnection(url, userName, password);
         System.out.println(con);
         int sid = 5;
