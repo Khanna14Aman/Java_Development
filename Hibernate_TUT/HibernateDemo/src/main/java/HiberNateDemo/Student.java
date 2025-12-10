@@ -9,6 +9,15 @@ public class Student {
     private int sid;
     private String name;
     private int age;
+    private Address address;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     public int getSid() {
         return sid;
