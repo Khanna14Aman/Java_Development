@@ -1,0 +1,5 @@
+1: ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring.xml");
+// Here container will get created and object will get created inside the container for all the bean maintained in the given xml file based on the id of the bean.
+
+2: By default scope of bean is singleton this means for one bean only one object will get created and that will be returned every time getBean gets called.
+3: if we assign attribute scope = "prototype" for a bean then object will get created only when get getBean gets called. And every time getBean gets called new object will get created in container and returned.
