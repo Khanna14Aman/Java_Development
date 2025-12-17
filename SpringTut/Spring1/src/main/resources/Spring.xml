@@ -5,5 +5,24 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-<bean id = "student" class = "org.Spring1.Student" scope="prototype"></bean>
+<bean id = "student" class = "org.Spring1.Student" scope="prototype">
+    <property name="age" value="12"/>
+    <property name="laptop" ref="laptop"/>
+</bean>
+    <bean id = "laptop" class="org.Spring1.Laptop" scope="prototype">
+<!--        <constructor-arg index="0" value="32GB"/>-->
+<!--        <constructor-arg index="2" value="12"/>-->
+<!--        <constructor-arg index="1" value="Intel"/>-->
+            <constructor-arg name="processor" value="intel"/>
+        <constructor-arg name="memory" value="12"/>
+        <constructor-arg name="ram" value="32TB"/>
+    </bean>
+
+    <bean id = "student2" class="org.Spring2.Student" scope="prototype" autowire="byType">
+<!--        <property name="computer" ref="computer"></property>-->
+    </bean>
+    <bean id = "computer" class="org.Spring2.Laptop" scope="prototype" primary="true"></bean>
+    <bean id = "computer1" class="org.Spring2.Desktop" scope="prototype"></bean>
+
+    <bean id="testingLazy" class="org.Spring2.TestingLazy" lazy-init="true"></bean>
 </beans>

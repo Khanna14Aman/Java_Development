@@ -1,5 +1,13 @@
 1: ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Spring.xml");
 // Here container will get created and object will get created inside the container for all the bean maintained in the given xml file based on the id of the bean.
 
-2: By default scope of bean is singleton this means for one bean only one object will get created and that will be returned every time getBean gets called.
+2: By default scope of bean is singleton this means for one bean only one object will get created while initializing applicationContext and that will be returned every time getBean gets called.
 3: if we assign attribute scope = "prototype" for a bean then object will get created only when get getBean gets called. And every time getBean gets called new object will get created in container and returned.
+
+4:Setter Injection=>  <property> element inside <bean> element used to assign the value of any property (instance variable) of the class which used by that bean. But value can be assigned using setter function of that variable. If setter function is not available then we will get error that missing setter function.
+5:Ref Attribute=> If we want to assign object of another class to an instance variable then inside property element we can use "ref" attribute.
+6: Inside property element we use value attribute to assign value to primitive type instance variable and we use ref attribute to assign value to reference type instance variable.
+7: Constructor injection is used to initialize a value of instance variable using constructor. by default we have to use <Constructor-arg> element in order they are mentioned in constructor else it will give error. Or we can use index number to assign value inside constructor. Or If we are using name attribute in constructor-arg then it must be in order or use annotation @ConstructorProperties and define the name of parameters in constructor in order.
+8: In one Spring.xml file every bean Id should be unique.
+9: In autowire attribute of bean if you give "byName" then it will search the bean Id same as the instance variable name in the class.
+10: primary attribute:=> If autowire attribute of bean is gets confused multiple matching then the bean which has primary attribute true will get selected.
