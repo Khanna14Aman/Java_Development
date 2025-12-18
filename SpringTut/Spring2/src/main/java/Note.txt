@@ -1,0 +1,9 @@
+1: In java based configuration we have to use:
+ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+In AppConfig class we have to define configuration. We have to create a function which will return class object.
+
+2: We have create class object using getBean method passing requireType which is ClassName.class or we can pass the class name which is by default the function name in AppConfig class or we can give the name using name attribute inside Bean annotation.
+3: We have to use Bean annotation above every method in AppConfig class whose object we want to create.
+4: If we have used name attribute inside bean annotation then we can use only those mentioned name while creating objet default name will not work;
+5: By default scope of every bean is singleton this means while executing ApplicationContext line container will get created and every object will get created for whose annotation @Bean is used and scope is singleton.
+6: @Scope("prototype") used for making scope prototype

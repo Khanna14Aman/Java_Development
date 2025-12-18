@@ -11,3 +11,4 @@
 8: In one Spring.xml file every bean Id should be unique.
 9: In autowire attribute of bean if you give "byName" then it will search the bean Id same as the instance variable name in the class.
 10: primary attribute:=> If autowire attribute of bean is gets confused multiple matching then the bean which has primary attribute true will get selected.
+11: Inner Bean:=> Lets say student have a Laptop object and we are using property tag to assign value to instance variable means laptop object then in spring.xml file if we define bean of Laptop inside property tag then Laptop object can be only used by Student object.
