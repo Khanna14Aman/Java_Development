@@ -1,0 +1,7 @@
+1: All the annotation works same as working in Spring. Eg: @Component, @Scope, @Qualifier, @Pirmary, @Autowired, @Value, etc.
+2: It also have three level of injection that is field injection, constuctor injection, setter injection.
+3: @Qualifier annotation don't work for Constructor injection
+4: There are 3 layers in server that is
+    a: Controllers which accepts the request and send it to service layer, and take response from service layer then send it to application
+    b: Service layer which accepts the request from controllers and process accordingly means whole business logic written over here only, if any data requires then it send request to ask for data to repository layer and send back the processed result to controllers layers.
+    c: Repository layer which is used to connect with database and fetch data from database and update as well.

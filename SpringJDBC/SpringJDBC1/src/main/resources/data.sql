@@ -1,0 +1,1 @@
+insert into student values (2,'Ayush',20), (3,'Yes',30);
