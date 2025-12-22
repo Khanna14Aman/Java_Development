@@ -1,0 +1,3 @@
+Here we are using PostgreSQL data base as well as H2 database which is embedded database stored in ram only.
+Under resourse folder we use Schema.sql file to define schema in H2 database and data.sql to give initial value to table of H2 database.
+application.properties file is used to configue external database connectivity.

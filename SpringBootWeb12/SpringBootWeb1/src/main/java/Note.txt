@@ -1,0 +1,18 @@
+1: Here we are using embedded tomcat but usually in industry we use external tomcat server by downloading it online, that provides more features.
+2: External tomcat server also contain servlet dependency as well but servlet is not available in normal JDK.
+3: For running project on tomcat we have to crete package of our project and put it in tomcat. If it is a console application we should use .jar extension and if it is a web application then we should use .war extension.
+4: Service is an important method of HttpServlet which gets called when any request sent.
+5: Annotation @Webserver() for servlet mapping is working with external tomcat server only not with embedded server.
+6: tomcat.addContext(...) is used to create and register a web application (Context) inside the embedded Tomcat server.
+7: In standalone Tomcat, contexts are created from:
+
+   webapps/ folder
+
+   META-INF/context.xml
+
+   In embedded Tomcat, nothing is auto-created.
+   You must explicitly define the web application:
+
+8: Tomcat.addServlet is used to add create a servlet and add it to tomcat where we can create custom name of any servlet.
+9: context.addServletMappingDecoded is used to map the servlet and web url.
+10: Tomcat is a servlet container inside which only servlet can run, but JSP (Java Server Page) also runs inside tomcat just because JSP gets converted into Servlet and then runs.
