@@ -1,0 +1,22 @@
+1: MVC stands for Model–View–Controller. It is a software architectural pattern used to design applications—especially web and UI-based systems—by separating responsibilities into three distinct components. This separation improves maintainability, scalability, and testability.
+2: Model represents the business logic and data of the application
+
+   Interacts with the database or data source
+
+   Applies rules, validations, and computations
+
+3: View represents the user interface (UI)
+
+        Displays data provided by the Model
+
+        Does not contain business logic
+
+4: Controller acts as an intermediary between Model and View
+
+   Handles user input (HTTP requests, button clicks)
+
+   Calls the appropriate Model logic and selects the View
+5: We have to use @Controller for making class controller so when we send any request from frontend it will be accepted by controller class.
+6: Inside that class we have to use @RequestMapping("") inside this we have to define path of frontend so if from frontend that page we come then which class method should get executed.
+7: From this method we have to return the jsp page which we want to display at frontend. So java will try to find this jsp file in webapp folder and return it to frontend.
+8: Also we have to use tomcat-jasper dependency to so content will get visible.
