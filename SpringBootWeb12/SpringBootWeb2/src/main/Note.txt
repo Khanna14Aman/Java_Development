@@ -20,3 +20,5 @@
 6: Inside that class we have to use @RequestMapping("") inside this we have to define path of frontend so if from frontend that page we come then which class method should get executed.
 7: From this method we have to return the jsp page which we want to display at frontend. So java will try to find this jsp file in webapp folder and return it to frontend.
 8: Also we have to use tomcat-jasper dependency to so content will get visible.
+9: If you want to pass the data b/w the pages we should use Model object. Model is used to pass the data between controller and view
+10: If you want ModelAttribute to work automatically without using as annotation in method parenthesis then keep a instance variable name and the parameter name passing from frontend same.
