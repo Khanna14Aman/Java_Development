@@ -13,7 +13,7 @@ public class Embeddable {
         address.setRoadName("Kalyani Devi");
 
         Student student = new Student();
-        student.setSid(20);
+        student.setSid(201);
         student.setAge(10);
         student.setName("Naman");
         student.setAddress(address);
