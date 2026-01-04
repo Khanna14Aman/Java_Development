@@ -39,3 +39,5 @@ So JPA will provide some extra methods for instance variable which we generally 
 15: By using the Pageable interface, you effectively enable pagination in Spring Data JPA, allowing for more efficient data retrieval and management of large datasets. This approach aligns with the objective of understanding how Spring Data JPA handles pagination, ensuring you can implement it correctly in your applications.
 
 16: findById() method object of optional type then we have to convert it to entity type.
+
+17: If you use @RequestMapping("/api") above the controller class then every api calling with "/api" in url will come to this controller only

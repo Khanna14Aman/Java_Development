@@ -1,0 +1,4 @@
+1: If you use @RequestMapping("api") annotation on top of the controller class then every url containing "api" will come to this controller only.
+2: If you want to send custom Http status code the use ResponseEntity. Return actual data and HttpStatusCode inside ResponseEntity Constructor.
+3: @GeneratedValue(strategy = GenerationType.IDENTITY) This annotation in Product class will create a primary key using the product Id and will create new Product ID every time just by incrementing it.
+4:     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy") This annotation at releaseDate varialbe in product class will define the pattern of date in which it will be returned.
