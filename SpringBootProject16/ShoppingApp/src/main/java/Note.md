@@ -15,3 +15,5 @@ LOB = Large OBject
 11: Use @Query annotation when you are writing your own query in repo under JPA interface.
 12: Whenever you are getting warning for Large Object auto commit use the below line in application.properties file:
 spring.datasource.hikari.auto-commit=false
+
+13: A DTO (Data Transfer Object) is a simple object used to carry data between layers of an application, especially between the backend and frontend, controller and service, or over the network. It contains only data, no business logic.
