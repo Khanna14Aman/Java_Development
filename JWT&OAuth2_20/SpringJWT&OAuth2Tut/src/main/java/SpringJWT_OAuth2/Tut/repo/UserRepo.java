@@ -1,6 +1,6 @@
-package SpringSecurity.Tut.repo;
+package SpringJWT_OAuth2.Tut.repo;
 
-import SpringSecurity.Tut.model.User;
+import SpringJWT_OAuth2.Tut.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

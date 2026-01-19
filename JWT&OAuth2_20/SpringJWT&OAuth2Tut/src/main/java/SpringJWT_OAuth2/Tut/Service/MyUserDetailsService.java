@@ -1,8 +1,8 @@
-package SpringSecurity.Tut.Service;
+package SpringJWT_OAuth2.Tut.Service;
 
-import SpringSecurity.Tut.model.User;
-import SpringSecurity.Tut.model.UserPrincipal;
-import SpringSecurity.Tut.repo.UserRepo;
+import SpringJWT_OAuth2.Tut.model.User;
+import SpringJWT_OAuth2.Tut.model.UserPrincipal;
+import SpringJWT_OAuth2.Tut.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

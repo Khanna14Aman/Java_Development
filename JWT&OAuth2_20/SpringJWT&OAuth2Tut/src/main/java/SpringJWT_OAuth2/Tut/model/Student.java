@@ -1,4 +1,4 @@
-package SpringSecurity.Tut.model;
+package SpringJWT_OAuth2.Tut.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

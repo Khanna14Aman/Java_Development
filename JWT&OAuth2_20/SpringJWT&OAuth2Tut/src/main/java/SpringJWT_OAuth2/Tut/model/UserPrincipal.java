@@ -1,6 +1,5 @@
-package SpringSecurity.Tut.model;
+package SpringJWT_OAuth2.Tut.model;
 
-import SpringSecurity.Tut.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

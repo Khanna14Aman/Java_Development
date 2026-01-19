@@ -1,6 +1,6 @@
-package SpringSecurity.Tut.Controller;
+package SpringJWT_OAuth2.Tut.Controller;
 
-import SpringSecurity.Tut.model.Student;
+import SpringJWT_OAuth2.Tut.model.Student;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
