@@ -26,3 +26,16 @@ eureka.client.register-with-eureka=false
 Prevents the Eureka Server from registering itself as a client.
 This is required when running a single Eureka Server.
 If you were running multiple Eureka Servers (cluster), this might be true.
+
+5: Now First you have to run Eureka server and open the port where Eureka server is running, now when you run the Question service it will start reflecting on "Instance reflecting on Eureka server". Because in Pom.xml file of Question service there is Eureka Client Dependency is added so Question service is registered as a client in Eureka.
+
+6: Same as Quiz service will also get registered as a Eureka Client.
+7: Now in Quiz service you have to create a Interface by which you will fetch the data from Question service using Question service API's.
+8: use annotation @FeignClient("Name of Service whose api you want to hit");
+9: Inside interface mentioned all the method declaration of the service which you want to use.
+
+10: The @ElementCollection annotation tells JPA to store this collection of integers in a
+ separate table that's linked to the Quiz table, rather than trying to establish entity
+ relationships. So we have used this in Quiz Model for fetching list of question number.
+
+ 11: Use annotation @EnableFeignClients above the main class of Quiz to enable this service as a Feign Client.

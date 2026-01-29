@@ -35,14 +35,16 @@ public class QuestionService {
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
     }
 
-    public ResponseEntity<Question> addQuestion(Question question) {
+    public ResponseEntity<List<Question>> addQuestion(List<Question> questionList) {
         try {
-            questionDao.save(question);
-            return new ResponseEntity<>(question,HttpStatus.CREATED);
+            for(Question question: questionList){
+                questionDao.save(question);
+            }
+            return new ResponseEntity<>(questionList,HttpStatus.CREATED);
         }catch(Exception e){
             e.printStackTrace();
         }
-        return new ResponseEntity<>(new Question(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
     }
 
     public ResponseEntity<List<Integer>> getQuestionsForQuiz(String categoryName, Integer numQuestions) {
@@ -86,7 +88,7 @@ public class QuestionService {
         try {
             int right = 0;
             for (Response response : responses) {
-                Question question = questionDao.findById(response.getId()).get();
+                Question question = questionDao.findById(response.getQuestionId()).get();
                 if (response.getResponse().equals(question.getRightAnswer())) {
                     right++;
                 }
