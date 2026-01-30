@@ -39,3 +39,24 @@ If you were running multiple Eureka Servers (cluster), this might be true.
  relationships. So we have used this in Quiz Model for fetching list of question number.
 
  11: Use annotation @EnableFeignClients above the main class of Quiz to enable this service as a Feign Client.
+
+12: So now we have multiple services running parallelerly and we need to call each of them using there API's but this is not feasible to use, what if we have more than 10 services then every time we have to call different API's with different port numbers. 
+So, using API gateway we will call only one endpoint using only 1 port number and from there every other services gets call.
+13: For API Gateway we have to create one more microservices with dependencies Eureka client, and Cloud Gateway.
+14: Now in application.properties file add below instructions;
+
+spring.application.name=apigateway => Defining API-Gateway service name
+
+server.port=8765  => defining port number
+
+
+spring.cloud.gateway.discovery.locator.enabled=true
+Enables automatic route creation in Spring Cloud Gateway based on services registered in Eureka (or any DiscoveryClient).
+
+
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+Forces Gateway to expose routes using lowercase service IDs in URLs.
+Why this exists
+Eureka registers services in UPPERCASE
+URLs are usually lowercase
+Case-sensitive URLs cause 404 issues
