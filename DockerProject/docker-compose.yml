@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8079:8079"
+    networks:
+      - s-network
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: aman
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: DockerCompose
+    ports:
+      - 5433:5432
+    networks:
+      - s-network
+    volumes:
+      - postgres-s-data:/var/lib/postgresql
+
+networks:
+  s-network:
+    driver: bridge
+
+volumes:
+  postgres-s-data:
